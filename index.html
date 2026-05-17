@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isha Zalavadia — AI/ML Developer Portfolio</title>
+  <meta name="description" content="AI/ML Engineer & Full-Stack Developer specializing in Multi-Agent Systems, RAG Pipelines, LLMs, FastAPI, and Flutter. B.Tech CSE @ BVM." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-logo">IZ<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://github.com/ishaa21" target="_blank" class="nav-cta">GitHub ↗</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="closeMobile()">About</a></li>
+      <li><a href="#projects" onclick="closeMobile()">Projects</a></li>
+      <li><a href="#skills" onclick="closeMobile()">Skills</a></li>
+      <li><a href="#experience" onclick="closeMobile()">Experience</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Available for opportunities · Placement 2026
+      </div>
+      <h1 class="hero-name reveal">
+        <span class="line">Isha</span>
+        <span class="line italic">Zalavadia</span>
+      </h1>
+      <p class="hero-title reveal">AI/ML Engineer & Full-Stack Developer</p>
+      <p class="hero-sub reveal">
+        Multi-Agent Systems · RAG Pipelines · LLMs · FastAPI · Flutter<br/>
+        B.Tech CSE @ Birla Vishvakarma Mahavidyalaya
+      </p>
+      <div class="hero-ctas reveal">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">AI Systems Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">Top 0.8%</span>
+          <span class="stat-label">DDCET Rank</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Internships</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">01 — About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Building <em>intelligent</em> systems that actually ship</h2>
+          <p>I'm an AI/ML Engineer and Full-Stack Developer from Rajkot, India, currently pursuing B.Tech in Computer Engineering at BVM. I started with a Diploma (CGPA 8.9) and have since built multi-agent orchestration systems, RAG pipelines, and agentic workflow engines — not just as experiments, but as deployed, working software.</p>
+          <p>My background in mobile development taught me to think about performance, real users, and production constraints. I brought that mindset into AI — every system I build is designed to <em>actually work</em>, not just demo well.</p>
+          <p>Actively targeting AI/ML and SDE roles at 12+ LPA where I can build products that scale.</p>
+          <div class="about-links">
+            <a href="https://linkedin.com/in/isha-zalavadia" target="_blank" class="about-link">LinkedIn ↗</a>
+            <a href="https://github.com/ishaa21" target="_blank" class="about-link">GitHub ↗</a>
+            <a href="https://leetcode.com/u/ishaa21" target="_blank" class="about-link">LeetCode ↗</a>
+            <a href="https://g.dev/isha_zalavadia" target="_blank" class="about-link">Google Dev ↗</a>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div>
+              <div class="edu-deg">B.Tech — Computer Engineering</div>
+              <div class="edu-school">Birla Vishvakarma Mahavidyalaya</div>
+              <div class="edu-meta">2023 – 2027 · CGPA 6.40</div>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-icon">📜</div>
+            <div>
+              <div class="edu-deg">Diploma — Computer Engineering</div>
+              <div class="edu-school">A V Parekh Technical Institute</div>
+              <div class="edu-meta">2021 – 2024 · CGPA 8.9</div>
+            </div>
+          </div>
+          <div class="achievement-card">
+            <span class="ach-icon">🏆</span>
+            <span>Rank <strong>155</strong> / 20,000+ in DDCET &mdash; Top <strong>0.8%</strong> statewide</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">02 — Projects</div>
+      <h2 class="section-title">Things I've <em>built</em></h2>
+      <div class="projects-grid">
+
+        <!-- AgentOS — moved to Featured, has live demo -->
+        <div class="project-card featured">
+          <div class="project-top">
+            <div class="project-tag">Featured · Live</div>
+            <div class="project-links">
+              <a href="https://github.com/ishaa21/AgentOS" target="_blank" title="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://agentos-hkc4.onrender.com" target="_blank" title="Live Demo">↗</a>
+            </div>
+          </div>
+          <h3 class="project-title">AgentOS — Multi-Agent Task Management</h3>
+          <p class="project-desc">Orchestrator-based AI system where a single natural-language request triggers coordinated, autonomous multi-step workflows across Task, Calendar, and Notes agents via 11 MCP tools — powered by Gemini LLM and FastAPI.</p>
+          <div class="project-tech">
+            <span>FastAPI</span><span>Gemini LLM</span><span>MCP (11 tools)</span><span>SQLAlchemy</span><span>Docker</span><span>Cloud Run</span>
+          </div>
+          <div class="project-highlights">
+            <div class="highlight"><span class="hl-icon">⚡</span> One prompt → 4 coordinated agent actions</div>
+            <div class="highlight"><span class="hl-icon">📊</span> Agent execution logging dashboard</div>
+            <div class="highlight"><span class="hl-icon">🌐</span> Live at agentos-hkc4.onrender.com</div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag">AI / Agentic</div>
+            <div class="project-links">
+              <a href="https://github.com/DhwaniDalsania/FlowState-agentic_mcp_gateway" target="_blank" title="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Agentic MCP Gateway</h3>
+          <p class="project-desc">Self-evolving multi-API orchestration engine bridging natural-language intent to complex workflows across Notion, GitHub, Slack, and Google Sheets. Features multi-agent routing, workflow parallelization, encrypted credential vault, and human-in-the-loop approval gates.</p>
+          <div class="project-tech">
+            <span>Node.js</span><span>Groq LLM</span><span>Notion API</span><span>Slack API</span><span>Google Sheets</span><span>OAuth</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag">AI / Full-Stack</div>
+            <div class="project-links">
+              <a href="https://github.com/ishaa21/SkillMatch" target="_blank" title="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">SkillMatch — AI Internship Platform</h3>
+          <p class="project-desc">AI-powered internship matching platform with a weighted skill-scoring engine that maps candidate profiles to role requirements. Features role-based access control for students and recruiters, and real-time notifications via Socket.IO.</p>
+          <div class="project-tech">
+            <span>Flutter</span><span>Node.js</span><span>MongoDB</span><span>Socket.IO</span><span>Express</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag">AI / Full-Stack</div>
+            <div class="project-links">
+              <a href="https://github.com/ishaa21/SafarAI" target="_blank" title="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">SafarAI — Agentic Travel Planner</h3>
+          <p class="project-desc">Intelligent multi-agent travel planning assistant powered by Google ADK, Gemini, and Model Context Protocol (MCP). Integrates Google Maps data into the LLM's reasoning pipeline for geospatial, personalized itineraries.</p>
+          <div class="project-tech">
+            <span>FastAPI</span><span>Gemini AI</span><span>MCP</span><span>Google Maps</span><span>Docker</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag">AI / Full-Stack</div>
+            <div class="project-links">
+              <a href="https://github.com/ishaa21/Community_Link" target="_blank" title="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">CommunityLink — AI Volunteer Platform</h3>
+          <p class="project-desc">AI-powered volunteer coordination platform using Gemini AI for smart need-to-volunteer matching. Real-time data ecosystem built with Google Firestore, containerized with Docker, and deployed on Google Cloud Run.</p>
+          <div class="project-tech">
+            <span>Flask</span><span>Gemini AI</span><span>Firestore</span><span>Docker</span><span>Cloud Run</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag">Mobile / EdTech</div>
+            <div class="project-links">
+              <a href="https://github.com/ishaa21/LearnDSA" target="_blank" title="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">LearnDSA</h3>
+          <p class="project-desc">Clean, offline-first Flutter app for mastering Data Structures and Algorithms. Built for students preparing for placements — includes interactive visualizers, multi-language code snippets, and a structured problem practice suite.</p>
+          <div class="project-tech">
+            <span>Flutter</span><span>Dart</span><span>Provider</span><span>Local Storage</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">03 — Skills</div>
+      <h2 class="section-title">My <em>toolkit</em></h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <div class="skill-group-icon">🤖</div>
+          <h4>AI / ML</h4>
+          <ul>
+            <li>LLMs (Gemini, Groq)</li>
+            <li>Multi-Agent Systems</li>
+            <li>RAG Pipelines</li>
+            <li>Prompt Engineering</li>
+            <li>LangChain / Agno / CrewAI</li>
+            <li>MCP Protocol</li>
+            <li>n8n Workflow Automation</li>
+            <li>Ollama (local LLMs)</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-icon">⚙️</div>
+          <h4>Backend</h4>
+          <ul>
+            <li>FastAPI (Python)</li>
+            <li>Node.js / Express</li>
+            <li>REST API Design</li>
+            <li>Firebase (Auth + Firestore)</li>
+            <li>Socket.IO</li>
+            <li>SQLAlchemy ORM</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-icon">📱</div>
+          <h4>Mobile</h4>
+          <ul>
+            <li>Android (Kotlin)</li>
+            <li>Flutter / Dart</li>
+            <li>MVVM Architecture</li>
+            <li>Jetpack Compose</li>
+            <li>RecyclerView / ConstraintLayout</li>
+            <li>Material Design 3</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-icon">🗄️</div>
+          <h4>Data & Cloud</h4>
+          <ul>
+            <li>MySQL · MongoDB · SQLite</li>
+            <li>Firebase Firestore</li>
+            <li>Docker</li>
+            <li>Google Cloud Run</li>
+            <li>Render</li>
+            <li>GitHub Actions (CI)</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-icon">💻</div>
+          <h4>Languages</h4>
+          <ul>
+            <li>Python</li>
+            <li>Kotlin</li>
+            <li>Dart</li>
+            <li>JavaScript</li>
+            <li>C++ / Java</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-icon">🧩</div>
+          <h4>Core CS</h4>
+          <ul>
+            <li>Data Structures & Algorithms</li>
+            <li>OOP Principles</li>
+            <li>DBMS</li>
+            <li>Operating Systems</li>
+            <li>Computer Networks</li>
+            <li>System Design (learning)</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">04 — Experience</div>
+      <h2 class="section-title">Where I've <em>worked</em></h2>
+      <div class="timeline">
+
+        <!-- NEW: AI/ML internship — most recent, top of timeline -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="tl-meta">May 2026 – Present</div>
+            <h3 class="tl-role">AI/ML Trainee (Online)</h3>
+            <div class="tl-company">MyJobGrow × Elan &amp; nVision, IIT Hyderabad</div>
+            <div class="tl-stack">Python · LangChain · CrewAI · RAG · Agno · n8n · Ollama</div>
+            <ul class="tl-points">
+              <li>Completed an intensive Generative AI program covering RAG pipelines, multi-agent orchestration, and agentic workflow automation using LangChain, CrewAI, Agno, and n8n.</li>
+              <li>Built a CrewAI multi-agent RAG Knowledge Bot with intent-aligned document retrieval and hallucination-minimized summarization as capstone deliverable.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="tl-meta">Jun 2025 – Jul 2025</div>
+            <h3 class="tl-role">Mobile Application Development Intern</h3>
+            <div class="tl-company">Rajkot, India</div>
+            <div class="tl-stack">Kotlin · Firebase · MVVM · Material Design</div>
+            <ul class="tl-points">
+              <li>Architected Android modules using Kotlin + MVVM; cut screen load time by <strong>45%</strong> via async coroutines and lazy loading.</li>
+              <li>Integrated Firebase Authentication &amp; Firestore for real-time, secure multi-user data handling.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="tl-meta">Sep 2023 – Oct 2023</div>
+            <h3 class="tl-role">Mobile Application Developer Intern</h3>
+            <div class="tl-company">Rajkot, India</div>
+            <div class="tl-stack">XML · RecyclerView · ConstraintLayout · Android SDK</div>
+            <ul class="tl-points">
+              <li>Designed 8+ responsive Android UI screens; improved rendering performance by <strong>30%</strong> via optimized view hierarchies.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="certs-section">
+        <h3 class="certs-title">Certifications</h3>
+        <div class="certs-grid">
+          <div class="cert-card"><span class="cert-issuer">Oracle</span><span class="cert-name">Cloud Infrastructure 2025 Generative AI</span></div>
+          <div class="cert-card"><span class="cert-issuer">Google</span><span class="cert-name">Android Development with Kotlin</span></div>
+          <div class="cert-card"><span class="cert-issuer">Deloitte</span><span class="cert-name">Technology Job Simulation</span></div>
+          <div class="cert-card"><span class="cert-issuer">Google Garage</span><span class="cert-name">Fundamentals of Digital Marketing</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">05 — Contact</div>
+      <div class="contact-wrap">
+        <div class="contact-left">
+          <h2 class="section-title">Let's <em>build</em> something</h2>
+          <p class="contact-sub">I'm actively targeting AI/ML and SDE roles (12+ LPA), with placement starting June 2026. If you're building something interesting or have an opportunity — I'd love to connect.</p>
+          <div class="contact-items">
+            <a href="mailto:ishazalavadia@gmail.com" class="contact-item">
+              <span class="ci-icon">✉</span>
+              <span>ishazalavadia@gmail.com</span>
+            </a>
+            <a href="tel:+917779008118" class="contact-item">
+              <span class="ci-icon">📞</span>
+              <span>+91 7779008118</span>
+            </a>
+            <a href="https://linkedin.com/in/isha-zalavadia" target="_blank" class="contact-item">
+              <span class="ci-icon">in</span>
+              <span>linkedin.com/in/isha-zalavadia</span>
+            </a>
+            <a href="https://github.com/ishaa21" target="_blank" class="contact-item">
+              <span class="ci-icon">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </span>
+              <span>github.com/ishaa21</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="Tell me about the opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width">Send Message →</button>
+            <div class="form-note" id="formNote"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-logo">IZ<span class="dot">.</span></span>
+      <span class="footer-copy">© 2026 Isha Zalavadia · Rajkot, India</span>
+      <div class="footer-links">
+        <a href="https://github.com/ishaa21" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/isha-zalavadia" target="_blank">LinkedIn</a>
+        <a href="https://leetcode.com/u/ishaa21" target="_blank">LeetCode</a>
+        <a href="https://g.dev/isha_zalavadia" target="_blank">Google Dev</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
