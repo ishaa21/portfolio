@@ -2,32 +2,36 @@
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
 
-function closeMobile() {
-  mobileMenu.classList.remove('open');
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.remove('open');
+    }
+  });
 }
 
-// Close on outside click
-document.addEventListener('click', (e) => {
-  if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+function closeMobile() {
+  if (mobileMenu) {
     mobileMenu.classList.remove('open');
   }
-});
+}
 
 // ── SCROLL REVEAL ──
 const reveals = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       // Stagger siblings
       const siblings = [...entry.target.parentElement.querySelectorAll('.reveal:not(.visible)')];
       const idx = siblings.indexOf(entry.target);
       setTimeout(() => {
         entry.target.classList.add('visible');
-      }, idx * 80);
+      }, Math.max(0, idx) * 70);
       revealObserver.unobserve(entry.target);
     }
   });
@@ -47,15 +51,19 @@ function observeSections() {
 }
 observeSections();
 
-// ── NAV SCROLL EFFECT ──
+// ── NAV SCROLL EFFECT (CLASS-BASED FOR CLEAN LIGHT THEME) ──
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    nav.style.background = 'rgba(10,12,16,0.97)';
-  } else {
-    nav.style.background = 'rgba(10,12,16,0.85)';
-  }
-});
+if (nav) {
+  const handleNavScroll = () => {
+    if (window.scrollY > 20) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', handleNavScroll);
+  handleNavScroll();
+}
 
 // ── ACTIVE NAV LINK ──
 const sections = document.querySelectorAll('section[id]');
@@ -65,14 +73,17 @@ const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       navLinks.forEach(link => {
-        link.style.color = '';
         if (link.getAttribute('href') === '#' + entry.target.id) {
-          link.style.color = 'var(--teal)';
+          link.style.color = 'var(--text)';
+          link.style.fontWeight = '600';
+        } else {
+          link.style.color = '';
+          link.style.fontWeight = '';
         }
       });
     }
   });
-}, { threshold: 0.4 });
+}, { threshold: 0.35 });
 
 sections.forEach(s => sectionObserver.observe(s));
 
@@ -80,36 +91,44 @@ sections.forEach(s => sectionObserver.observe(s));
 const form = document.getElementById('contactForm');
 const note = document.getElementById('formNote');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-  if (!name || !email || !message) {
-    note.style.color = '#f87171';
-    note.textContent = 'Please fill all fields.';
-    return;
-  }
+    if (!name || !email || !message) {
+      if (note) {
+        note.style.color = '#dc2626';
+        note.textContent = 'Please fill all required fields.';
+      }
+      return;
+    }
 
-  // mailto fallback — opens email client
-  const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-  window.location.href = `mailto:ishazalavadia@gmail.com?subject=${subject}&body=${body}`;
+    // mailto fallback — opens email client
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    window.location.href = `mailto:ishazalavadia@gmail.com?subject=${subject}&body=${body}`;
 
-  note.style.color = 'var(--teal)';
-  note.textContent = '✓ Opening your email client...';
-  form.reset();
-  setTimeout(() => { note.textContent = ''; }, 4000);
-});
+    if (note) {
+      note.style.color = 'var(--accent)';
+      note.textContent = '✓ Opening your email client to send message...';
+      form.reset();
+      setTimeout(() => { note.textContent = ''; }, 4500);
+    }
+  });
+}
 
 // ── SMOOTH ANCHOR OFFSET (for fixed nav) ──
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
-      const offset = 70;
+      const offset = 75;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
